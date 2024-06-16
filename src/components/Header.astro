@@ -11,12 +11,20 @@ import { SITE_TITLE } from '../consts';
 		</div>
 	</nav>
 </header>
+
 <style>
 	header {
-		margin: 0;
+		position: fixed;
+		width: calc(100% - 1em);
+		margin: 0 auto;
 		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		top: 0;
+		left: 50%;
+		transform: translate(-50%);
+		background: rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(20px);
+		box-shadow: 0 8px 10px -15px var(--black);
+		z-index: 99;
 	}
 	h2 {
 		margin: 0;
@@ -35,11 +43,6 @@ import { SITE_TITLE } from '../consts';
 	nav a {
 		padding: 1em 0.5em;
 		color: var(--black);
-		border-bottom: 4px solid transparent;
 		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
 	}
 </style>
